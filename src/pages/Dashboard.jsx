@@ -22,7 +22,7 @@ const Dashboard = () => {
 
   const fetchTransactions = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/transactions');
+      const response = await fetch('https://mobile-recharge-api.onrender.com/api/transactions');
       if (response.ok) {
         const data = await response.json();
         setTransactions(data.data || []);
@@ -316,3 +316,4 @@ const Dashboard = () => {
 
 
 export default Dashboard;
+
